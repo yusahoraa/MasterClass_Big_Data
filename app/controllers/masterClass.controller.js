@@ -23,7 +23,7 @@ exports.create = (req, res) => {
       .catch(err => {
         res.status(500).send({
           message:
-            err.message || "Some error occurred while creating the Tutorial."
+            err.message || "Some error occurred while creating the restaurant."
         });
       });
   };
@@ -78,7 +78,7 @@ exports.delete = (req, res) => {
       .then(data => {
         if (!data) {
           res.status(404).send({
-            message: `Cannot delete restaurant with id=${id}. Maybe Tutorial was not found!`
+            message: `Cannot delete restaurant with id=${id}. Maybe restaurant was not found!`
           });
         } else {
           res.send({
